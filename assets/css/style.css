@@ -18,9 +18,37 @@ h1, h2{
     color: #252525;
 }
 
+#cover-text, #cover-text h2{
+color: white;
+}
+
+#cover-text{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 130%;
+    font-family: Oswald, sans-serif;
+
+    height: 200px;
+    width: 200px;
+
+    padding-top: 40px;
+    padding-left: 10px;
+
+    background-color: rgba(235, 65, 65, 0.692);
+
+    bottom: 30px;
+    right: 150px;
+
+    position: absolute;
+}
+
 #logo{
     float: left;
     font-size: 280%;
+}
+
+#menu, #logo{
+    line-height: 75px;
 }
 
 #menu{
@@ -36,4 +64,45 @@ h1, h2{
 
 #push-right{
     float: right;
+}
+
+#menu a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#menu a:hover{
+    border-bottom: 1px solid #3a3a3a;
+}
+
+.active{
+    border-bottom: 1px solid #3a3a3a;
+}
+/*hero image and animation*/
+#hero-outer{
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+#hero-image{
+    height: 600px;
+    width: 100%;
+    background: url(../images/hero-image.webp) no-repeat center center; 
+    animation-name: hero-zoom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+
+
+@keyframes hero-zoom {
+    from{
+        transform:scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }
 }
